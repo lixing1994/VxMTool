@@ -13,7 +13,9 @@ Although Vrep has the built-in function of co-simulation between Vrep and Matlab
   	|--matlab_output.txt
   	|--vrep_output.txt
 
-![cache](.\image\cache.png)
+<p align="center" width="100%">
+  <img src=".\image\cache.png" />
+</p>
 
 #### 2.Set init data
 
@@ -23,7 +25,9 @@ When you set 0 in `flag.txt`, Vrep will read data from `matlab_output.txt`, the 
 
 So, if you want to start this co-simulation, you need to manually set the init data either to Matlab or Vrep. 
 
-![how to start](.\image\how to start.png)
+<p align="center" width="100%">
+  <img src=".\image\how to start.png" width="400" />
+</p>
 
 #### 3.Run co-simulation
 
@@ -31,7 +35,9 @@ So, if you want to start this co-simulation, you need to manually set the init d
 
 Demo1 is a simulation of a single spring-damper system. 
 
-![spring-damper system](.\image\spring-damper system.jpg)
+<p align="center" width="100%">
+  <img src=".\image\spring-damper system.jpg" width="300" />
+</p>
 
 It can be described as follow
 $$
@@ -66,11 +72,15 @@ end
 
 Matlab calculate the z axis location and velocity by ode45. Solve this equation and you get a  decaying harmonic curve
 
-![normal](.\image\normal.png)
+<p align="center" width="100%">
+  <img src=".\image\normal.png"  />
+</p>
 
 With the help of VxMTool, you can visualize it.
 
-![demo1](.\image\demo1.gif)
+<p align="center" width="100%">
+  <img src=".\image\demo1.gif"  />
+</p>
 
 ## Demo2
 
@@ -112,10 +122,12 @@ else
 end
 ```
 
-
-
-![bump](.\image\bump.png)
+<p align="center" width="100%">
+  <img src=".\image\bump.png"  />
+</p>
 
 It's easy for Vrep to do the collision detection especially in higher dimension and the contact surface is complicated.
 
-![demo2](.\image\demo2.gif)
+<p align="center" width="100%">
+  <img src=".\image\demo2.gif"  />
+</p>
