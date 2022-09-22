@@ -1,0 +1,44 @@
+function VxMTool_readSignalFile(file)
+    local RnW = false
+    while true do
+        -- wait until matlab return 
+        local flag = io.open(file, "r")
+        if tonumber(flag:read())==0 then
+            RnW = true
+            flag:close()
+            break
+        end
+        flag:close()
+        --print('waiting for matlab')
+    end
+    return RnW
+end
+
+
+function VxMTool_readFromMatlab(file,data_num)
+    local matlab = io.open(file, "r")
+    local readData={}
+    for i=1,data_num,1 do
+        readData[i]=tonumber(matlab:read()) --read one line at a time
+    end
+    matlab:close()
+    return readData
+end
+
+
+function VxMTool_writeVrepOutput(file,data,data_num)
+    local file = io.open(file, "w+")
+    for i=1,data_num,1 do
+        file:write(tostring(data[i]).."\n")
+    end
+    -- finish writing process
+    file:flush()
+    file:close()
+end
+
+
+function VxMTool_resetFlag(file)
+    local flag = io.open(file, "w")
+    flag:write('1')
+    flag:close()    
+end
