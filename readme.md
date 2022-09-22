@@ -8,10 +8,12 @@ Although Vrep has the built-in function of co-simulation between Vrep and Matlab
 
 #### 1.Create cache folder
 
---C:\VxMToolCache\
+```
+C:\VxMToolCache\
   	|--flag.txt
   	|--matlab_output.txt
   	|--vrep_output.txt
+```
 
 <p align="center" width="100%">
   <img src=".\image\cache.png" />
@@ -40,17 +42,17 @@ Demo1 is a simulation of a single spring-damper system.
 </p>
 
 It can be described as follow
-$$
-mx'' + cx' + kx = 0
-$$
+
+<p align="center" width="100%">
+  <img src=".\image\eq1.png"  />
+</p>
+
 Here we need to transfer it to first-order ordinary differential equations to fit in Matlab
-$$
-\begin{array}{l}
-\left( {{y_1} = x} \right)\\
-{{y'}_1}\left( { = x'} \right) = {y_2}\\
-{{y'}_2}\left( { = x''} \right) =  - \frac{c}{m}{y_2} - \frac{k}{m}{y_1}
-\end{array}
-$$
+
+<p align="center" width="100%">
+  <img src=".\image\eq2.png"  />
+</p>
+
 Function of the cubic.
 
 ```matlab
@@ -87,17 +89,16 @@ With the help of VxMTool, you can visualize it.
 In demo2, we add a ball free falling upon the cubic, when ball touch the cubic they exchange moment(m1=m2=1).
 
 Model of ball
-$$
-y = g{t^2}
-$$
+
+<p align="center" width="100%">
+  <img src=".\image\eq3.png"  />
+</p>
+
 Transfer to first-order ordinary differential equations
-$$
-\begin{array}{l}
-\left( {{y_1} = y} \right)\\
-{{y'}_1}\left( { = y' = 2gt} \right) = {y_2}\\
-{{y'}_2}\left( { = y''} \right) = 2g
-\end{array}
-$$
+<p align="center" width="100%">
+  <img src=".\image\eq4.png"  />
+</p>
+
 Function of ball
 
 ```matlab
